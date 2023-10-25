@@ -2,7 +2,7 @@
 
 $base-fontfamily: 'Noto Sans JP', sans-serif;
 
-$base-line-skip: 1rem;
+$base-line-skip: 1.3rem;
 $base-bgcolor: darkred;
 $base-bdcolor: rgba(139, 0, 0, 0.69);
 $base-bgfont-color: white;
@@ -59,31 +59,31 @@ html, body {
 	padding-top: 4rem;
 
 	h1 {
-		margin-top: $base-line-skip * 3;
-		margin-bottom: $base-line-skip * 3;
+		margin-top: $base-line-skip * 4;
+		margin-bottom: $base-line-skip * 4;
 	}
 
 	h2 {
-		margin-top: $base-line-skip;
-		margin-bottom: $base-line-skip;
+		margin-top: $base-line-skip * 2;
+		margin-bottom: $base-line-skip * 2;
 	}
 
 	h3 {
-		margin-top: $base-line-skip;
-		margin-bottom: $base-line-skip;
+		margin-top: $base-line-skip * 1.5;
+		margin-bottom: $base-line-skip * 1.5;
 	}
 
 	.section {
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 	
 	// .card {
 	// 	margin-bottom: 1rem;
 	// }
 	
-	// .list_item {
-	// 	margin-bottom: .5rem;
-	// }
+	.list_item {
+		margin-bottom: $base-line-skip * 0.1;
+	}
 	
 	// .alert {
 	// 	margin-top: 6rem;

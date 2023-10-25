@@ -6,7 +6,10 @@
             <div v-for="year in Object.keys(cis).reverse()" :id="`cis_${year}`">
                 <h3>{{ year }}</h3>
                 <ul :id="`cislist_${year}`">
-                    <li class="list_item" v-for="(item, index) in cis[year]" :id="`cis_${year}_${index}`">{{ item }}</li>
+                    <li class="list_item" v-for="(item, index) in cis[year]" :id="`cis_${year}_${index}`">
+                        {{ item.body }}
+                        <span v-if="'url' in item">(<a :href="item.url" target="_blank">link</a>)</span>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -15,7 +18,7 @@
             <div v-for="year in Object.keys(others).reverse()" :id="`others_${year}`">
                 <h3>{{ year }}</h3>
                 <ul :id="`otherslist_${year}`">
-                    <li class="list_item" v-for="(item, index) in others[year]" :id="`others_${year}_${index}`">{{ item }}</li>
+                    <li class="list_item" v-for="(item, index) in others[year]" :id="`others_${year}_${index}`">{{ item.body }}</li>
                 </ul>
             </div>
         </div>
@@ -48,6 +51,7 @@ module.exports = {
                 if (bib.entryType == "COMMENT") { continue }
 
                 const content = bib.entryTags
+                console.log(content)
                 content.title = removeTexFromItm(content.title)
                 content.author = parseAuthors(content.author)
 
@@ -55,7 +59,8 @@ module.exports = {
                     result[content.year] = []
                 }
 
-                let item = null
+                const item = {}
+                let body = null
                 switch (bib.entryType.toLowerCase()) {
                     case "incollection":
                     case "inproceedings":
@@ -66,16 +71,24 @@ module.exports = {
                         if ("pages" in content) { others.push(`pp.${content.pages}`) }
                         others.push(`${content.month} ${content.year}`)
                         if ("note" in content) { others.push(`(${content.note})`)}
-                        item = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}.`
+                        body = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}.`
                         break;
                     case "article":
-                        item = `${content.author.join(", ")}, "${content.title}," ${content.journal}, Vol.${content.volume}, No.${content.number}, pp.${content.pages}, ${content.month} ${content.year}.`
+                        body = `${content.author.join(", ")}, "${content.title}," ${content.journal}, Vol.${content.volume}, No.${content.number}, pp.${content.pages}, ${content.month} ${content.year}.`
                     default:
                         break;
+                }
+                item["body"] = body
+
+                if ("url" in content) {
+                    item["url"] = content.url
+                } else if ("doi" in content) {
+                    item["url"] = `https://doi.org/${content.doi}`
                 }
 
                 result[content.year].push(item)            
             }
+            console.log(result)
             return result
         }
     }

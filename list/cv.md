@@ -36,8 +36,8 @@
 * 2017年4月～2022年11月: International Workshop on Information and Communication Security (CANDAR-WICS), Program Committee
 * 2017年7月～2018年11月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
 * 2019年4月～2020年7月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* 2022年4月～現在: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* 2022年11月～現在: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
+* 2022年11月～2023年4月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
+* 2022年11月～2023年7月: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
 * 2023年4月～現在：情報処理学会 コンピュータセキュリティ研究会, 運営委員
 
 ## 社会における活動等

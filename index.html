@@ -63,7 +63,7 @@
 
     <script type="module">
         import * as Vue from "vue"
-        import {createRouter, createWebHistory} from "vue-router"
+        import {createRouter, createWebHashHistory} from "vue-router"
         import {loadModule} from "vue3-sfc-loader"
 
         const pub_path = "./web/vue/publication.vue"
@@ -79,7 +79,7 @@
         }
 
         const router = createRouter({
-            history: createWebHistory(),
+            history: createWebHashHistory(),
             routes: [
                 {
                     path: "/cv",
@@ -98,7 +98,7 @@
                         }
                 },
                 {
-                        path: "/profile",
+                        path: "/",
                         component: () => loadModule(pub_path, options),
                         props: {
                             cisbib_path: "./list/paper_cis.bib", othersbib_path: "./list/paper_others.bib"

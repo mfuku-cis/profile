@@ -29,6 +29,7 @@ const removeTexFromItm = (tex_lst_itm) => tex_lst_itm.replace(/{/g, "").replace(
 
 export const bib2json = async (filepath, asc=ture) => {
     const bib_text = await file2str(filepath)
+    // usage & referred: https://marked.js.org/using_pro#renderer  
     const bib_list = bibtexParse.toJSON(removeTexFromFile(bib_text))
 
     const years = []
@@ -87,7 +88,7 @@ export const bib2json = async (filepath, asc=ture) => {
 export const md2json = async (filepath) => {
     const md_text = await file2str(filepath)
 
-    // usage: https://marked.js.org/using_pro#renderer  
+    // usage & referred: https://marked.js.org/using_pro#renderer  
     const renderer = {
         heading(text, level) {
             if (level == 1) { return "" }

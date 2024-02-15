@@ -73,4 +73,11 @@ html, body {
     -o-object-fit: contain;
        object-fit: contain;
   }
+}
+#container .footer {
+  margin: 5rem 0;
+  text-align: center;
+}
+#container .footer .text-mutad {
+  width: 100%;
 }/*# sourceMappingURL=fukulab.css.map */

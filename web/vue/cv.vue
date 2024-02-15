@@ -1,23 +1,55 @@
+<script setup>
+import { ref, onMounted, defineProps } from "vue"
+import { file2str, md2json } from "util"
+
+const props = defineProps({cv_path: String})
+
+const cv_data = ref(null)
+const import_md = async () => {
+    // mdファイルを読み込み, markedを使ったJSON化
+    const cv_md_txt = await file2str(props.cv_path)
+    const cv_json = await md2json(cv_md_txt)
+
+    // markedのJSONデータからレンダリング用JSONに変換
+    const result = []
+    let list_name = null
+    while (cv_json.length > 0) {
+        const item = cv_json.shift()
+        if (item.type == 2) {
+            result.push({"name": item.name, "lists": []})
+        } else if (item.type == 3) {
+            list_name = item.name
+        } else if (item.type == "list") {
+            if (list_name == null) {
+                result.slice(-1)[0].lists.push({"items": item.body})
+            } else {
+                result.slice(-1)[0].lists.push({"name": list_name, "items": item.body})
+                list_name = null
+            }
+        }
+    }
+    cv_data.value = result
+}
+onMounted(import_md)
+</script>
+
 <template>
     <div id="cv">
         <h1>CV</h1>
-        <!-- <div class="image-frame">
-            <img class="img-fluid rounded" src="./web/img/fuku.jpg">
-        </div> -->
-        <div v-for="(sect, i) in cv_data" :id="`sect${i}`">
+        <div v-for="(sect, sect_idx) in cv_data" :id="`sect${sect_idx}`">
             <h2 class="border-bottom">{{ sect.name }}</h2>
             <div class="section">
-                <div v-for="(list, j) in sect.lists" :id="`list-${i}-${j}`">
-                    <h3 v-if="'name' in list"> {{ list.name }}</h3>
+                <div v-for="(lst, lst_idx) in sect.lists" :id="`lst-${sect_idx}-${lst_idx}`">
+                    <h3 v-if="'name' in lst"> {{ lst.name }}</h3>
                     <p>
                         <ul class="list-unstyled">
-                            <li class="list_item" v-for="(litem, k) in list.items" :id="`list-${i}-${j}-${k}`">
-                                <span v-if="'heading' in litem">{{ litem.heading }}:</span>
+                            <li class="list_item" v-for="(itm, itm_idx) in lst.items" :id="`lst-${sect_idx}-${lst_idx}-${itm_idx}`">
+                                <span v-if="'heading' in itm">{{ itm.heading }}:</span>
                             
-                                <a v-if="'href' in litem" :href="litem.href" class="link-primary" target="_blank">
-                                    <span>{{ litem.body }}</span>
+                                <a v-if="'href' in itm" :href="itm.href" class="link-primary" target="_blank">
+                                    <span>{{ itm.body }}</span>
                                 </a>
-                                <span v-else>{{ litem.body }}</span>
+                                <span v-else>{{ itm.body }}</span>
                             </li>
                         </ul>
                     </p>
@@ -26,74 +58,3 @@
         </div>
     </div>
 </template>
-
-<script>
-module.exports = {
-    props: {
-        cv_path: String
-    },
-    data: function() {
-        return {
-            cv_data: null
-        }
-    },
-    created: async function () {
-        const cv_md = await file2str(this.cv_path)
-
-        // usage: https://marked.js.org/using_pro#renderer  
-        const renderer = {
-            heading(text, level) {
-                if (level == 1) { return "" }
-                return `{"type": ${level}, "name": "${text}"},`
-            },
-            list(body, ordered) {
-                return `{"type": "list", "body": [${body}]},`
-            },
-            listitem(text) {
-                if (text.match(/"href":/)){
-                    return text
-                }
-                const listed = text.split(": ")
-
-                if (listed.length == 1) {
-                    return `{"body": "${text}"},`
-                } else {
-                    return `{"heading": "${listed[0]}", "body": "${listed[1]}"},`
-                }
-            },
-            link(href, title, text) {
-                return `{"href": "${href}", "body": "${text}"},`
-            }
-        }
-        marked.use({ renderer })
-
-        const parsed = `[${marked.parse(cv_md)}]`
-        const tremed = parsed.replace(/,]/g, "]").replace(/,}/g, "}")
-
-        // console.log(tremed)
-
-        const cv_json = JSON.parse(tremed)
-        const result = []
-
-        let list_name = null
-        while (cv_json.length > 0) {
-            const item = cv_json.shift()
-            if (item.type == 2) {
-                result.push({"name": item.name, "lists": []})
-            } else if (item.type == 3) {
-                list_name = item.name
-            } else if (item.type == "list") {
-                if (list_name == null) {
-                    result.slice(-1)[0].lists.push({"items": item.body})
-                } else {
-                    result.slice(-1)[0].lists.push({"name": list_name, "items": item.body})
-                    list_name = null
-                }
-            }
-        }
-        // console.log(JSON.stringify(result))
-
-        this.cv_data = result
-    }
-}
-</script>

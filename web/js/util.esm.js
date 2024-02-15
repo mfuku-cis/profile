@@ -1,11 +1,11 @@
 import { use, parse } from "marked"
 
-export const file2str = async (filepath) => {
+const file2str = async (filepath) => {
 	const res = await fetch(filepath)
 	return await res.text()
 }
 
-export const parseAuthors = (author_txt) => {
+const parseAuthors = (author_txt) => {
     let authors = [author_txt]
     if(author_txt.includes(" and ")) {
         authors = author_txt.split(" and ")
@@ -24,10 +24,69 @@ export const parseAuthors = (author_txt) => {
 
 }
 
-export const removeTexFromFile = (tex_txt) => tex_txt.replace(/--/g, "-").replace(/~/g, " ")
-export const removeTexFromItm = (tex_lst_itm) => tex_lst_itm.replace(/{/g, "").replace(/}/g, "")
+const removeTexFromFile = (tex_txt) => tex_txt.replace(/--/g, "-").replace(/~/g, " ")
+const removeTexFromItm = (tex_lst_itm) => tex_lst_itm.replace(/{/g, "").replace(/}/g, "")
 
-export const md2json = async (md_text) => {
+export const bib2json = async (filepath, asc=ture) => {
+    const bib_text = await file2str(filepath)
+    const bib_list = bibtexParse.toJSON(removeTexFromFile(bib_text))
+
+    const years = []
+    const result = {}
+    for(const bib of bib_list) {
+        if (bib.entryType == "COMMENT") { continue }
+
+        const content = bib.entryTags
+        content.title = removeTexFromItm(content.title)
+        content.author = parseAuthors(content.author)
+
+        if (!(content.year in result)) {
+            years.push(content.year)
+            result[content.year] = []
+        }
+
+        const item = {}
+        let body = null
+        switch (bib.entryType.toLowerCase()) {
+            case "incollection":
+            case "inproceedings":
+                const others = [content.booktitle]
+                if ("series" in content) { others.push(content.series) }
+                if ("volume" in content) { others.push(content.volume) }
+                if ("number" in content) { others.push(content.number) }
+                if ("pages" in content) { others.push(`pp.${content.pages}`) }
+                others.push(`${content.month} ${content.year}`)
+                if ("note" in content) { others.push(`(${content.note})`)}
+                body = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}.`
+                break;
+            case "article":
+                body = `${content.author.join(", ")}, "${content.title}," ${content.journal}, Vol.${content.volume}, No.${content.number}, pp.${content.pages}, ${content.month} ${content.year}.`
+            default:
+                break;
+        }
+        item["body"] = body
+
+        if ("url" in content) {
+            item["url"] = content.url
+        } else if ("doi" in content) {
+            item["url"] = `https://doi.org/${content.doi}`
+        }
+
+        result[content.year].push(item)            
+    }
+
+    if (asc) {
+        years.sort((a, b) => a - b)
+    } else {
+        years.sort((a, b) => b - a)
+    }
+        
+    return [years, result]
+}
+
+export const md2json = async (filepath) => {
+    const md_text = await file2str(filepath)
+
     // usage: https://marked.js.org/using_pro#renderer  
     const renderer = {
         heading(text, level) {

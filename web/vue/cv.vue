@@ -1,16 +1,15 @@
 <script setup>
 import { ref, onMounted, defineProps } from "vue"
-import { file2str, md2json } from "util"
+import { md2json } from "util"
 
 const props = defineProps({cv_path: String})
 
 const cv_data = ref(null)
 const import_md = async () => {
-    // mdファイルを読み込み, markedを使ったJSON化
-    const cv_md_txt = await file2str(props.cv_path)
-    const cv_json = await md2json(cv_md_txt)
+    // Convert md file to JSON by the marked lib
+    const cv_json = await md2json(props.cv_path)
 
-    // markedのJSONデータからレンダリング用JSONに変換
+    // Convert the marked JSON to the our format
     const result = []
     let list_name = null
     while (cv_json.length > 0) {

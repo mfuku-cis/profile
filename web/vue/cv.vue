@@ -1,10 +1,13 @@
 <script setup>
 import { ref, onMounted, defineProps } from "vue"
 import { md2json } from "util"
+import { useI18n } from "i18n"
 
 const props = defineProps({cv_path: String})
+const { t, locale } = useI18n()
 
 const cv_data = ref(null)
+const lang = ref(locale.value)
 const import_md = async () => {
     // Convert md file to JSON by the marked lib
     const cv_json = await md2json(props.cv_path)

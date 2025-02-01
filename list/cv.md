@@ -50,6 +50,7 @@
 * 2018年1月: 情報セキュリティ（ISEC）研究専門委員会 SCIS論文賞
 * 2018年9月: FIT 船井ベストペーパー賞
 * 2022年11月: CANDAR Outstanding Papers Award
+* 2024年11月: CANDAR Outstanding Papers Award
 
 ## 担当科目
 

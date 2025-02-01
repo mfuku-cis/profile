@@ -38,9 +38,10 @@
 
 ## Awards
 
-* Dynamic Group Signatures with Message Dependent Opening and Non-Interactive Signing, the CANDAR Outstanding Papers, 2022. I was awarded with Hiroaki Anada, a joint researcher from Aomori University (at that time), Shingo Hasegawa, a joint researcher from Tohoku University (at that time).
+* Group Signatures with Designated Traceability over Openers’ Attributes from Lattices, the CANDAR Outstanding Papers, 2024. I was awarded with Hiroaki Anada and Shingo Hasegawa.
+* Dynamic Group Signatures with Message Dependent Opening and Non-Interactive Signing, the CANDAR Outstanding Papers, 2022. I was awarded with Hiroaki Anada and Shingo Hasegawa.
 * On a Development of a QWERTY Software Keyboard to Efficiently Input Texts with only a Thumb, the FIT Funai Best Paper Award, 2017. I was awarded with Yuki Nakajima, an advising student.
-* A Galindo-Garcia-like Identity-Based Signature with Tight Security Reduction, the CANDAR Outstanding Papers, 2017. I was awarded with Shingo Hasegawa, a joint researcher from Tohoku University (at that time).
+* A Galindo-Garcia-like Identity-Based Signature with Tight Security Reduction, the CANDAR Outstanding Papers, 2017. I was awarded with Shingo Hasegawa.
 * On the Impossibility of the Provable Security of the Schnorr Signature from the One-More DL Assumption, the SCIS (Symposium on Cryptography and Information Security, one of the largest symposiums on Cryptography and information security in Japan) Paper Prize, 2017.
 * A Proposal of an Advising Method to Create Secure Passwords Associated from Images, The Encouragement Prize from Tohoku-Section Joint Convention of Institutes of Electrical and Information Engineers, Japan, 2008.
 

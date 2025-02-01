@@ -39,7 +39,8 @@
 * 2022年11月～2023年7月: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
 * 2023年4月～現在：情報処理学会 コンピュータセキュリティ研究会, 運営委員
 * 2024年2月～2024年3月: The 11th ACM Asia Public-Key Cryptography Workshop (APKC 2024), Program Committee
-* 2024年6月～現在: コンピュータセキュリティシンポジウム2024 (CSS 2024), 実行委員
+* 2024年5月～現在: 第106回EIP・第57回SPT・第107回CSEC合同研究発表会, プログラム委員
+* 2024年6月～2024年10月: コンピュータセキュリティシンポジウム2024 (CSS 2024), 実行委員
 * 2024年6月～2024年7月: The 25th World Conference on Information Security Applications (WISA 2024), Program Committee
 
 ## 受賞

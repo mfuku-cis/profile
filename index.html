@@ -41,9 +41,15 @@
 
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
-                                <router-link class="nav-link" to="/cv">cv</router-link>
-                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  cv
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-item"><router-link class="nav-link" to="/cv_en">English</router-link></li>
+                                    <li class="dropdown-item"><router-link class="nav-link" to="/cv_ja">Japanese</router-link></li>
+                                </ul>
+                              </li>
                             <li class="nav-item">
                                 <router-link class="nav-link" to="/publication">publication</router-link>
                             </li>
@@ -55,7 +61,7 @@
 
         <div class="container" id="container">
             <div class="contents">
-                <router-view></router-view>
+                <router-view :key="$route.fullPath"></router-view>
             </div>
 
             <footer class="footer">
@@ -109,12 +115,22 @@
             history: createWebHashHistory(),
             routes: [
                 {
-                    path: "/cv",
-                    name: "cv",
+                    path: "/cv_ja",
+                    name: "cv_ja",
                     component: () => loadModule(cv_path, options),
                     props: {
                         cv_path: "./list/cv.md"
-                    }
+                    },
+                    key: "cv_ja"
+                },
+                {
+                    path: "/cv_en",
+                    name: "cv_en",
+                    component: () => loadModule(cv_path, options),
+                    props: {
+                        cv_path: "./list/cv_en.md"
+                    },
+                    key: "cv_en"
                 },
                 {
                     path: "/publication",

@@ -51,6 +51,10 @@ html, body {
 	.nav-link {
 		color: $base-bgfont-color;
 	}
+
+	.dropdown-menu {
+		background-color: $base-bgcolor;
+	  }
 }
 
 #container {

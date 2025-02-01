@@ -1,23 +1,25 @@
-@InProceedings{FH24_scis,
-  author    = {福光 正幸 and 長谷川 真吾},
-  booktitle = {2024年暗号と情報セキュリティシンポジウム (SCIS2024)},
-  title     = {Key LeakageとCorruptionへの耐性を考慮したMulti-User Settingにおいて緊密な安全性を持つ耐量子計算機署名},
-  year      = {2024},
-  month     = {1月},
-  number    = {4A2-5},
-  pages     = {1--8},
-  location  = {長崎},
+@inproceedings{FH24_scis,
+	author    = {福光 正幸 and 長谷川 真吾},
+	title     = {
+    Key LeakageとCorruptionへの耐性を考慮したMulti-User Settingにおいて緊密な安全性を持つ耐量子計算機署名},
+	booktitle = {2024年暗号と情報セキュリティシンポジウム (SCIS2024)},
+	pages     = {1--8},
+	month     = {1月},
+	number    = {4A2-5},
+	location  = {長崎},
+	year      = {2024}
 }
 
-@InProceedings{AFH24_scis_gsdtske,
-  author    = {穴田 啓晃 and 福光 正幸 and 長谷川 真吾},
-  booktitle = {2023年暗号と情報セキュリティシンポジウム (SCIS2023)},
-  title     = {開封者の属性上で指定された追跡可能性を有するグループ署名の対称鍵要素からの構成},
-  year      = {2024},
-  month     = {1月},
-  number    = {4E2-3},
-  pages     = {1--8},
-  location  = {長崎},
+@inproceedings{AFH24_scis_gsdtske,
+	author    = {穴田 啓晃 and 福光 正幸 and 長谷川 真吾},
+	title     = {
+    開封者の属性上で指定された追跡可能性を有するグループ署名の対称鍵要素からの構成},
+	booktitle = {2023年暗号と情報セキュリティシンポジウム (SCIS2023)},
+	pages     = {1--8},
+	month     = {1月},
+	number    = {4E2-3},
+	location  = {長崎},
+	year      = {2024}
 }
 
 @inproceedings{AFH24_scis_sas,
@@ -329,14 +331,16 @@
 	year      = {2017}
 }
 
-@InProceedings{FHIST16_csec,
-  author    = {福光 正幸 and 長谷川 真吾 and 岩崎 淳也 and 酒井 正夫 and 高橋 大樹},
-  booktitle = {研究報告コンピュータセキュリティ~(CSEC)},
-  title     = {秘密分散法と匿名通信による秘匿性に優れたP2P型ストレージ技術の提案},
-  year      = {2016},
-  month     = {3月},
-  number    = {6},
-  volume    = {2018-CSEC-72},
+@inproceedings{FHIST16_csec,
+	author    = {福光 正幸 and 長谷川 真吾 and 岩崎 淳也 and 酒井 正夫 and 高橋 大樹},
+	title     = {秘密分散法と匿名通信による秘匿性に優れたP2P型ストレージ技術の提案 },
+	booktitle = {研究報告コンピュータセキュリティ~(CSEC)},
+	volume    = {2018-CSEC-72},
+	number    = {6},
+	pages     = {},
+	month     = {3月},
+	location  = {},
+	year      = {2016}
 }
 
 @inproceedings{FH16_scis,
@@ -464,5 +468,3 @@
 	location  = {郡山},
 	year      = {2008}
 }
-
-@Comment{jabref-meta: databaseType:bibtex;}

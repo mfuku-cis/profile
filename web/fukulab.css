@@ -37,6 +37,9 @@ html, body {
 #navbar .nav-link {
   color: white;
 }
+#navbar .dropdown-menu {
+  background-color: darkred;
+}
 
 #container {
   padding-top: 4rem;

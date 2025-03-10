@@ -49,9 +49,6 @@
 
 * Introduction to Linear Algebra, Discrete Mathematics, and Statistics, Fundamental theory of Cryptography
 
-
-## Patents
-
 ## Grants Received
 
 * April 2023 - Present: Grant-in-Aid for Scientific Research (C), Development of Cryptographic Technologies That Compatibly Establish Anonymity and Traceability, 23K11106 , Japan Society for the Promotion of Science.

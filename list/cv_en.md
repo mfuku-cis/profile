@@ -9,8 +9,8 @@
 ## Education
 
 * March 2014: Tohoku University, Miyagi, Japan, Ph.D (Information Sciences), Dissertation Title Pseudo-Free Groups and Cryptographic Assumptions
-* March 2011: Tohoku University, Miyagi, Japan, Ph.D (Information Sciences)
-* March 2009: Iwate Prefectural University, Iwate, Japan, B.Sc (Software and Information Science)
+* March 2011: Tohoku University, Miyagi, Japan, M.S (Information Sciences)
+* March 2009: Iwate Prefectural University, Iwate, Japan, B.S (Software and Information Science)
 
 ## Employment
 
@@ -26,7 +26,7 @@
 
 ### Activities
 
-* June 2024 - July 2024: The 25th World Conference on Information Security Applications (WISA 2024), Program Committee
+* June 2024 - August 2024: The 25th World Conference on Information Security Applications (WISA 2024), Program Committee
 * February 2024 - March 2024: The 11th ACM Asia Public-Key Cryptography Workshop (APKC 2024), Program Committee
 * November 2022 - July 2023: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
 * November 2022 - April 2023: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor

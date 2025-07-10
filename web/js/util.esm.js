@@ -48,10 +48,11 @@ export const bib2json = async (filepath, asc=ture) => {
 
         const item = {}
         let body = null
+        const others = []
         switch (bib.entryType.toLowerCase()) {
             case "incollection":
             case "inproceedings":
-                const others = [content.booktitle]
+                others.push(content.booktitle)
                 if ("series" in content && content.series != "") { others.push(content.series) }
                 if ("volume" in content && content.volume != "") { others.push(content.volume) }
                 if ("number" in content && content.number != "") { others.push(content.number) }
@@ -62,6 +63,10 @@ export const bib2json = async (filepath, asc=ture) => {
                 break;
             case "article":
                 body = `${content.author.join(", ")}, "${content.title}," ${content.journal}, Vol.${content.volume}, No.${content.number}, pp.${content.pages}, ${content.month} ${content.year}.`
+            case "misc":
+                
+                if ("howpublished" in content && content.howpublished != "") { others.push(content.howpublished) }
+                body = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}, ${content.month} ${content.year}.`
             default:
                 break;
         }

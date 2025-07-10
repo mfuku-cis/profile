@@ -26,15 +26,12 @@
 
 ### Activities
 
-* June 2024 - August 2024: The 25th World Conference on Information Security Applications (WISA 2024), Program Committee
-* February 2024 - March 2024: The 11th ACM Asia Public-Key Cryptography Workshop (APKC 2024), Program Committee
-* November 2022 - July 2023: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
-* November 2022 - April 2023: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* April 2019 - July 2020: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* July 2017 - November 2018: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* April 2017 - Present: International Workshop on Information and Communication Security (CANDAR-WICS), Program Committee
-* April 2017 - Present: International Symposium on Computing and Networking (CANDAR), Program Committee
-* April 2016 - December 2016: 5th International Conference on the Theory and Practice of Natural Computing (TPNC 2016), Organization Committee
+* The World Conference on Information Security Applications (WISA): 2024 (Program Committee)
+* ACM Asia Public-Key Cryptography Workshop (APKC): 2024-2025 (Program Committee); 2023 (Program Co-chair)
+* IEICE Transaction Special Section on Information and Communication System Security: 2017-2025 (Guest Editor)
+* International Workshop on Information and Communication Security (CANDAR-WICS): 2017-2025 (Program Committee)
+* International Symposium on Computing and Networking (CANDAR): 2017-2025 (Program Committee)
+* International Conference on the Theory and Practice of Natural Computing (TPNC): 2016 (Organization Committee)
 
 ## Awards
 

@@ -46,7 +46,7 @@ onMounted(import_md)
                     <p>
                         <ul class="list-unstyled">
                             <li class="list_item" v-for="(itm, itm_idx) in lst.items" :id="`lst-${sect_idx}-${lst_idx}-${itm_idx}`">
-                                <span v-if="'heading' in itm">{{ itm.heading }}: </span>
+                                <span v-if="'heading' in itm">{{ itm.heading }}:&emsp;</span>
                             
                                 <a v-if="'href' in itm" :href="itm.href" class="link-primary" target="_blank">
                                     <span>{{ itm.body }}</span>

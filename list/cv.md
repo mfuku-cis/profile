@@ -30,18 +30,18 @@
 
 ### 学会における活動等
 
-* 2016年4月～2016年12月: 5th International Conference on the Theory and Practice of Natural Computing (TPNC 2016), Organization Committee
-* 2017年4月～現在: International Symposium on Computing and Networking (CANDAR), Program Committee
-* 2017年4月～現在: International Workshop on Information and Communication Security (CANDAR-WICS), Program Committee
-* 2017年7月～2018年11月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* 2019年4月～2020年7月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* 2022年11月～2023年4月: IEICE Transaction Special Section on Information and Communication System Security, Guest Editor
-* 2022年11月～2023年7月: The 10th ACM Asia Public-Key Cryptography Workshop (APKC 2023), Program Co-chair
 * 2023年4月～現在：情報処理学会 コンピュータセキュリティ研究会, 運営委員
-* 2024年2月～2024年3月: The 11th ACM Asia Public-Key Cryptography Workshop (APKC 2024), Program Committee
-* 2024年5月～現在: 第106回EIP・第57回SPT・第107回CSEC合同研究発表会, プログラム委員
-* 2024年6月～2024年10月: コンピュータセキュリティシンポジウム2024 (CSS 2024), 実行委員
-* 2024年6月～2024年7月: The 25th World Conference on Information Security Applications (WISA 2024), Program Committee
+
+#### 論文誌・会議関連
+
+* International Conference on the Theory and Practice of Natural Computing (TPNC): 2016 (Organization Committee)
+* International Symposium on Computing and Networking (CANDAR): 2017-2025 (Program Committee)
+* International Workshop on Information and Communication Security (CANDAR-WICS): 2017-2025 (Program Committee)
+* IEICE Transaction Special Section on Information and Communication System Security: 2017-2025 (Guest Editor)
+* ACM Asia Public-Key Cryptography Workshop (APKC): 2024-2025 (Program Committee); 2023 (Program Co-chair)
+* The World Conference on Information Security Applications (WISA): 2024 (Program Committee)
+* コンピュータセキュリティシンポジウム (CSS): 実行委員: 2024
+* CSEC研究発表会: プログラム委員: 第106回
 
 ## 受賞
 

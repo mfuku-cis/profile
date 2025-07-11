@@ -40,8 +40,8 @@
 * IEICE Transaction Special Section on Information and Communication System Security: 2017-2025 (Guest Editor)
 * ACM Asia Public-Key Cryptography Workshop (APKC): 2024-2025 (Program Committee); 2023 (Program Co-chair)
 * The World Conference on Information Security Applications (WISA): 2024 (Program Committee)
-* コンピュータセキュリティシンポジウム (CSS): 実行委員: 2024
-* CSEC研究発表会: プログラム委員: 第106回
+* コンピュータセキュリティシンポジウム (CSS): 2024 (実行委員)
+* CSEC研究発表会: 第106回 (プログラム委員)
 
 ## 受賞
 

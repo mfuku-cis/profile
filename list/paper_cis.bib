@@ -1,15 +1,18 @@
 % Encoding: UTF-8
 
 @article{AFH25:ijnc,
-	title   = {Group Signatures with Designated Traceability over Openers’ Attributes from Lattices},
-	author  = {Anada, Hiroaki and Fukumitsu, Masayuki and Hasegawa, Shingo},
-	journal = {International Journal of Networking and Computing},
-	volume  = {},
-	number  = {},
-	pages   = {},
-	year    = {2025},
-	month   = {},
-	note    = {To be published}
+	author   = {Hiroaki Anada and Masayuki Fukumitsu and Shingo Hasegawa},
+	title    = {Efficient Group Signatures with Designated Traceability over Openers’ Attributes from Lattices},
+	journal  = {International Journal of Networking and Computing},
+	volume   = {15},
+	number   = {2},
+	month    = {July},
+	year     = {2025},
+	keywords = {group signature; openers; attributes; lattices},
+	abstract = {The group signature with designated traceability (GSdT) is a kind of group signatures (GS) which aim to restrict the opening authority of the group manager; by setting an access structure over openers’ attributes at the signing, a signer is able to control openers who can open the signature. A generic construction of GSdT was given when the notion was introduced, then a pairing-based construction and a symmetric-key-based one were presented. Nonetheless, it remains open whether a post-quantum GSdT with full anonymity can be truly constructed.In this paper, we give a lattice-based GSdT scheme that has full anonymity for the first time. In our construction, the lattice-based ciphertext-policy attribute-based encryption (CPABE) by Tsabary and the lattice-based group signatures (GS) by Libert et al. are employed. The CP-ABE is based on the Regev public-key encryption, while the GS uses a non-interactive zero-knowledge proof to prove the correctness of the encryption in the signing process. Based on the compatibility, we combine and modify them to build up a GSdT scheme.},
+	issn     = {2185-2847},
+	pages    = {153--181},
+	url      = {http://www.ijnc.org/index.php/ijnc/article/view/336}
 }
 
 @article{FH25:ieice,
@@ -40,35 +43,41 @@
 }
 
 @inproceedings{AFH24:icisc,
-	author    = {Anada, Hiroaki and Fukumitsu, Masayuki and Hasegawa, Shingo},
-	booktitle = {The 27th Annual International Conference on Information Security and Cryptology (ICISC)},
-	comment   = {{"presenter": 0}},
-	keywords  = {Public key;Lattices;Encryption;group signature;openers;attributes;lattices},
+	author    = {Anada, Hiroaki
+	             and Fukumitsu, Masayuki
+	             and Hasegawa, Shingo},
+	editor    = {Kim, Jongsung
+	             and Park, Jungsoo
+	             and Lee, Wai-Kong},
+	title     = {Tightly Secure Lattice-Based Synchronized Aggregate Signature in Standard Model},
+	booktitle = {Information Security and Cryptology -- ICISC 2024 },
 	month     = {November},
-	number    = {},
-	pages     = {},
-	title     = {Tightly Secure Lattice-based Synchronized Aggregate Signature in Standard Model},
-	volume    = {},
-	year      = {2024}
+	year      = {2025},
+	publisher = {Springer Nature Singapore},
+	address   = {Seoul},
+	pages     = {56--70},
+	abstract  = {Synchronized aggregate signature (AS) can aggregate multiple individual signatures into one signature, when the individual signatures are generated at the same period. Although several synchronized AS schemes have been proposed, all of them are not quantum computer resistant. In this paper, we discuss a lattice-based synchronized AS that is secure in the standard model and the certified-key model. The proposed scheme is based on the multi-signature scheme proposed by Fleischhacker, Herold, Simkin and Zhang. We convert their multi-signature scheme into the synchronized AS scheme by separating a public key into two parts and applying the homomorphic vector commitment to each part. Our technique can handle hash values of messages as coefficients of homomorphic operation even if a message is different for each user, and then we can aggregate individual signatures for different messages into one signature. Our result is not only the first lattice-based synchronized AS but also the first lattice-based AS secure in the standard model.},
+	isbn      = {978-981-96-5566-3},
+	comment   = {{"presenter": 0}}
 }
 
 @inproceedings{FH24:provsec,
-	abstract  = {We consider the multi-user security under the adaptive corruptions and key leakages ({\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecurity) for lattice-based signatures. Although there exists an {\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecure signature based on a number-theoretic assumption, or a leakage-resilient lattice-based signature in the single-user setting, {\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecure lattice-based signature is not known.},
-	address   = {Singapore},
 	author    = {Fukumitsu, Masayuki
 	             and Hasegawa, Shingo},
-	booktitle = {Provable and Practical Security (ProvSec)},
-	comment   = {{"presenter": 0}},
 	editor    = {Liu, Joseph K.
 	             and Chen, Liqun
 	             and Sun, Shi-Feng
 	             and Liu, Xiaoning},
-	isbn      = {978-981-96-0957-4},
-	month     = {September},
-	pages     = {236--245},
-	publisher = {Springer Nature Singapore},
 	title     = {On Multi-User Security of Lattice-Based Signature Under Adaptive Corruptions and Key Leakages},
-	year      = {2024}
+	booktitle = {Provable and Practical Security (ProvSec)},
+	month     = {September},
+	year      = {2024},
+	publisher = {Springer Nature Singapore},
+	address   = {Gold Coast},
+	pages     = {236--245},
+	abstract  = {We consider the multi-user security under the adaptive corruptions and key leakages ({\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecurity) for lattice-based signatures. Although there exists an {\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecure signature based on a number-theoretic assumption, or a leakage-resilient lattice-based signature in the single-user setting, {\$}{\$} {\backslash}textrm{\{}MU{\}}^{\{}{\backslash}textrm{\{}c{\}} {\backslash}{\&} {\backslash}textrm{\{}l{\}}{\}}{\$}{\$}MUc{\&}lsecure lattice-based signature is not known.},
+	isbn      = {978-981-96-0957-4},
+	comment   = {{"presenter": 0}}
 }
 
 @inproceedings{AFH24:pst,

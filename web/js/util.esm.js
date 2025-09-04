@@ -60,15 +60,16 @@ export const bib2json = async (filepath, asc=ture) => {
                 others.push(`${content.month} ${content.year}`)
                 if ("note" in content) { others.push(`(${content.note})`)}
                 body = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}.`
-                break;
+                break
             case "article":
                 body = `${content.author.join(", ")}, "${content.title}," ${content.journal}, Vol.${content.volume}, No.${content.number}, pp.${content.pages}, ${content.month} ${content.year}.`
+                break
             case "misc":
-                
                 if ("howpublished" in content && content.howpublished != "") { others.push(content.howpublished) }
                 body = `${content.author.join(", ")}, "${content.title}," ${others.join(", ")}, ${content.month} ${content.year}.`
+                break
             default:
-                break;
+                break
         }
         item["body"] = body
 

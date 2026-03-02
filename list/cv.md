@@ -38,10 +38,11 @@
 * International Symposium on Computing and Networking (CANDAR): 2017-2025 (Program Committee)
 * International Workshop on Information and Communication Security (CANDAR-WICS): 2017-2025 (Program Committee)
 * IEICE Transaction Special Section on Information and Communication System Security: 2017-2025 (Guest Editor)
-* ACM Asia Public-Key Cryptography Workshop (APKC): 2024-2025 (Program Committee); 2023 (Program Co-chair)
+* ACM Asia Public-Key Cryptography Workshop (APKC): 2024-2026 (Program Committee); 2023 (Program Co-chair)
 * The World Conference on Information Security Applications (WISA): 2024 (Program Committee)
-* コンピュータセキュリティシンポジウム (CSS): 2024 (実行委員)
+* コンピュータセキュリティシンポジウム (CSS): 2024 (実行委員), 2025 (プログラム委員)
 * CSEC研究発表会: 第106回 (プログラム委員)
+* IACR Asiacrypt: 2025 (Reviewer)
 
 ## 受賞
 
